@@ -5,12 +5,12 @@ const initialstate = {count : 10};
 const Reduce = (state = initialstate ,action) => {
     if(action.type === Increment){
         return {
-            ...state , count : state.count + new Number(action.payload)
+            ...state , count : state.count + 1
         }
     }
     else if( action.type === Decrement){
-        {
-            console.log(action.payload)
+        return {
+            ...state , count : state.count - 1
         }
         
     }

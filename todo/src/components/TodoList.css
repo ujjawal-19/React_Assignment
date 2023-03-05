@@ -1,0 +1,30 @@
+.todo-box{
+    display: flex;
+    justify-content: center;
+    background-color: brown;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+
+}
+
+.but-del{
+    background-color: black;
+    font-weight: bold;
+    color: antiquewhite;
+    border-radius: 5px;
+    margin-left: 5px;
+    
+}
+
+.but-edit{
+
+    background-color: black;
+    font-weight: bold;
+    color: antiquewhite;
+    border-radius: 5px;
+    margin-left: 5px;
+}

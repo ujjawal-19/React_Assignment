@@ -1,20 +1,18 @@
-import React ,{useState} from "react";
+import React  from "react";
 import './IncDecOpertor.css';
 import { useSelector,useDispatch } from "react-redux";
 import { increment,decrement } from "../redux/Count/Action";
 
 
 const IncDecOpertor = () => {
-    const [number , setNumber] = useState(2); 
     const count = useSelector(state => state.count );
-    const dispatch_1 = useDispatch(number);
-    const dispatch_2 = useDispatch(number);
+    const dispatch_1 = useDispatch();
+    const dispatch_2 = useDispatch();
     return(
         <div className="container">
             <h2>Count:{count}</h2>
-             <input type='number' value={number} onChange={e=>setNumber(e.target.value)}/>
-            <button onClick={(number)=>dispatch_1(increment(number))}>Increment</button>
-            <button onClick={(number)=>dispatch_2(decrement(number))}>Decrement</button>
+            <button onClick={()=>dispatch_1(increment())}>Increment</button>
+            <button onClick={()=>dispatch_2(decrement())}>Decrement</button>
         </div>
     );
 }
